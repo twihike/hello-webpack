@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./hello.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.hello {
+  color: midnightblue;
+  background-color: moccasin;
+  border-radius: 4px;
+}
+
+.hello-font {
+  font-family: 'MyFont';
+}
+
+.hello-svg {
+  background: url('./hello.svg');
+}
+
+::placeholder {
+  color: gray;
+}
