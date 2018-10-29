@@ -3,6 +3,8 @@
 ## Usage
 ```bash
 yarn run build
+# or
+yarn build
 ```
 
 ## How would I set this up myself?
@@ -10,8 +12,8 @@ yarn run build
 # install yarn
 
 # create project
-mkdir <project_naem>
-cd <project_naem>
+mkdir <project_name>
+cd <project_name>
 yarn init
 
 # webpack
@@ -23,22 +25,24 @@ yarn add -D webpack-merge
 yarn add -D case-sensitive-paths-webpack-plugin
 yarn add -D clean-webpack-plugin
 yarn add -D webpack-visualizer-plugin
-yarn add -D html-webpack-plugin
 
-# asset loader
-yarn add -D raw-loader
+# asset
 yarn add -D file-loader
 yarn add -D url-loader
+yarn add -D raw-loader
 yarn add -D papaparse
 yarn add -D csv-loader
 yarn add -D xml-loader
+
+# html
+yarn add -D html-webpack-plugin
 
 # css
 yarn add -D style-loader
 yarn add -D css-loader
 yarn add -D mini-css-extract-plugin
 # postcss
-yarn add -D browserslist # use autoprefixer / babel
+yarn add -D browserslist # use autoprefixer/babel
 yarn add -D autoprefixer
 yarn add -D cssnano
 yarn add -D postcss-loader
@@ -46,8 +50,9 @@ yarn add -D postcss-loader
 yarn add -D node-sass
 yarn add -D sass-loader
 
-# eslint / prettier
+# js
 yarn add -D thread-loader
+# eslint/prettier
 yarn add -D eslint
 eslint --init # edit your .eslintrc.js
 yarn add -D eslint-plugin-import
@@ -57,16 +62,15 @@ yarn add -D eslint-config-airbnb
 yarn add -D prettier
 yarn add -D eslint-config-prettier eslint-plugin-prettier
 yarn add -D eslint-loader
-
 # babel
 yarn add -D @babel/core @babel/cli @babel/preset-env
-yarn add -D @babel/polyfill
 yarn add -D babel-loader
 
-# typescript / prettier
+# typescript
 yarn add -D typescript
 yarn tsc --init # edit your tsconfig.json
 yarn add -D ts-loader
+# tslint/prettier
 yarn add -D tslint
 yarn tslint --init # edit your tslint.json
 yarn add -D tslint-config-airbnb
