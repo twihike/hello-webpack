@@ -35,6 +35,7 @@ yarn add -D csv-loader
 yarn add -D xml-loader
 
 # html
+yarn add -D html-loader
 yarn add -D html-webpack-plugin
 
 # css
