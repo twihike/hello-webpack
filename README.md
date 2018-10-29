@@ -42,8 +42,9 @@ yarn add -D style-loader
 yarn add -D css-loader
 yarn add -D mini-css-extract-plugin
 # postcss
-yarn add -D browserslist # use autoprefixer/babel
-yarn add -D autoprefixer
+yarn add -D postcss-cli
+yarn add -D browserslist # use postcss-preset-env/babel
+yarn add -D postcss-preset-env
 yarn add -D cssnano
 yarn add -D postcss-loader
 # sass

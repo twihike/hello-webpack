@@ -29,6 +29,9 @@ module.exports = merge(base, {
           },
           {
             loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
           },
           {
             loader: 'postcss-loader',
@@ -46,6 +49,9 @@ module.exports = merge(base, {
           },
           {
             loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            },
           },
           {
             loader: 'postcss-loader',
