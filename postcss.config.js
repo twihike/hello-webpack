@@ -1,12 +1,13 @@
 module.exports = ctx => ({
   plugins: {
-    autoprefixer: {},
+    'postcss-preset-env': {},
     cssnano:
       ctx.env === 'production'
         ? {
             preset: [
               'default',
               {
+                normalizeUrl: false,
                 mergeLonghand: false,
               },
             ],
