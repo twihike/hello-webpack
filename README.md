@@ -53,6 +53,7 @@ yarn add -D node-sass
 yarn add -D sass-loader
 
 # js
+yarn add -D terser-webpack-plugin
 yarn add -D thread-loader
 # eslint/prettier
 yarn add -D eslint

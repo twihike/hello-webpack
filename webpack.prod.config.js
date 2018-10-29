@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const merge = require('webpack-merge');
@@ -82,6 +83,12 @@ module.exports = merge(base, {
         },
       },
     },
+    minimizer: [
+      new TerserPlugin({
+        parallel: true,
+        sourceMap: true,
+      }),
+    ],
   },
   plugins: [
     new webpack.DefinePlugin({
