@@ -1,12 +1,13 @@
-declare var _: any;
+// eslint-disable-next-line
+declare const _: any;
 
-export default async () => {
+export default async (): Promise<void> => {
   console.log(_.join(['hello', 'ts'], '.'));
-  await new Promise(async (resolve, reject) => {
-    setTimeout(() => {
+  await new Promise(
+    async (resolve): Promise<void> => {
       console.log('hello.ts task start');
-      resolve();
-    }, 1000);
-  });
+      setTimeout(resolve, 1000);
+    }
+  );
   console.log('hello.ts task end');
 };
