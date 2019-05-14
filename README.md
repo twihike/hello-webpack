@@ -44,41 +44,41 @@ yarn add -D css-loader
 yarn add -D mini-css-extract-plugin
 # postcss
 yarn add -D postcss-cli
-yarn add -D browserslist # use postcss-preset-env/babel
+yarn add -D browserslist # use postcss-preset-env and babel
 yarn add -D postcss-preset-env
 yarn add -D cssnano
 yarn add -D postcss-loader
 # sass
-yarn add -D node-sass
+yarn add -D sass
 yarn add -D sass-loader
 
 # js
 yarn add -D terser-webpack-plugin
 yarn add -D thread-loader
-# eslint/prettier
+# eslint
 yarn add -D eslint
 eslint --init # edit your .eslintrc.js
 yarn add -D eslint-plugin-import
 yarn add -D eslint-plugin-react
 yarn add -D eslint-plugin-jsx-a11y
 yarn add -D eslint-config-airbnb
+yarn add -D eslint-loader
+# prettier
 yarn add -D prettier
 yarn add -D eslint-config-prettier eslint-plugin-prettier
-yarn add -D eslint-loader
 # babel
-yarn add -D @babel/core @babel/cli @babel/preset-env
+yarn add core-js@2
+yarn add -D @babel/core @babel/cli
+yarn add -D @babel/preset-env @babel/polyfill
 yarn add -D babel-loader
 
 # typescript
 yarn add -D typescript
 yarn tsc --init # edit your tsconfig.json
 yarn add -D ts-loader
-# tslint/prettier
-yarn add -D tslint
-yarn tslint --init # edit your tslint.json
-yarn add -D tslint-config-airbnb
-yarn add -D tslint-config-prettier tslint-plugin-prettier
 yarn add -D fork-ts-checker-webpack-plugin
+# eslint
+yarn add -D @typescript-eslint/eslint-plugin
 
 # external lib
 yarn add -D lodash

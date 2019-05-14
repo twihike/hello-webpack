@@ -1,4 +1,5 @@
 const path = require('path');
+const sass = require('sass');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -59,6 +60,9 @@ module.exports = merge(base, {
           },
           {
             loader: 'sass-loader',
+            options: {
+              implementation: sass,
+            },
           },
         ],
       },
@@ -98,8 +102,7 @@ module.exports = merge(base, {
         BASE_URL: '""',
       },
     }),
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.NamedModulesPlugin(),
+    new webpack.NamedChunksPlugin(),
     new webpack.HashedModuleIdsPlugin({
       hashDigest: 'hex',
     }),
