@@ -1,4 +1,5 @@
 const path = require('path');
+const sass = require('sass');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VisualizerPlugin = require('webpack-visualizer-plugin');
@@ -51,6 +52,9 @@ module.exports = merge(base, {
           },
           {
             loader: 'sass-loader',
+            options: {
+              implementation: sass,
+            },
           },
         ],
       },
@@ -70,8 +74,8 @@ module.exports = merge(base, {
         BASE_URL: '""',
       },
     }),
-    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
     }),

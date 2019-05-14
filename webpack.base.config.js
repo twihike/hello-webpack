@@ -19,6 +19,7 @@ module.exports = {
             loader: 'eslint-loader',
             options: {
               formatter: codeframe,
+              configFile: '.eslintrc.js.js',
             },
           },
         ],
@@ -35,19 +36,20 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   enforce: 'pre',
-      //   test: /\.tsx?$/,
-      //   exclude: [/node_modules/],
-      //   use: [
-      //     {
-      //       loader: 'tslint-loader',
-      //       options: {
-      //         formatter: 'codeFrame',
-      //       },
-      //     },
-      //   ],
-      // },
+      {
+        enforce: 'pre',
+        test: /\.tsx?$/,
+        exclude: [/node_modules/],
+        use: [
+          {
+            loader: 'eslint-loader',
+            options: {
+              formatter: codeframe,
+              configFile: '.eslintrc.ts.js',
+            },
+          },
+        ],
+      },
       {
         test: /\.tsx?$/,
         exclude: [/node_modules/],
@@ -174,9 +176,9 @@ module.exports = {
       jQuery: 'jquery',
     }),
     new CaseSensitivePathsPlugin(),
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin({
-      tslint: true,
+      tslint: false,
       formatter: 'codeframe',
       checkSyntacticErrors: true,
     }),
