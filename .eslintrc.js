@@ -7,10 +7,6 @@ module.exports = {
   globals: {
     _: false,
   },
-  extends: [
-    'airbnb',
-    'plugin:prettier/recommended',
-  ],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -18,6 +14,7 @@ module.exports = {
   overrides: [
     {
       files: ['*.js'],
+      extends: ['airbnb', 'plugin:prettier/recommended'],
       rules: {
         'import/no-extraneous-dependencies': [
           'error',
@@ -27,6 +24,24 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      files: ['*.ts'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+        project: './tsconfig.json',
+        tsconfigRootDir: '.',
+      },
+      extends: [
+        'airbnb',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:prettier/recommended',
+        'prettier/@typescript-eslint',
+      ],
+      plugins: ['@typescript-eslint'],
     },
   ],
 };
