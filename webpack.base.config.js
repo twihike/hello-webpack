@@ -19,7 +19,7 @@ module.exports = {
             loader: 'eslint-loader',
             options: {
               formatter: codeframe,
-              configFile: '.eslintrc.js.js',
+              configFile: '.eslintrc.js',
             },
           },
         ],
@@ -45,7 +45,7 @@ module.exports = {
             loader: 'eslint-loader',
             options: {
               formatter: codeframe,
-              configFile: '.eslintrc.ts.js',
+              configFile: '.eslintrc.js',
             },
           },
         ],
