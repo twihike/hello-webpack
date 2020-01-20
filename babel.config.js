@@ -1,10 +1,20 @@
-const presets = [
-  [
-    '@babel/env',
-    {
-      useBuiltIns: 'usage',
-    },
-  ],
-];
+module.exports = function(api) {
+  api.cache(true);
 
-module.exports = { presets };
+  const presets = [
+    [
+      '@babel/preset-env',
+      {
+        useBuiltIns: 'usage',
+        corejs: {
+          version: 3,
+          proposals: true,
+        },
+      },
+    ],
+  ];
+
+  return {
+    presets,
+  };
+};

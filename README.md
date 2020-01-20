@@ -1,6 +1,7 @@
 # hello-webpack
 
 ## Usage
+
 ```bash
 yarn run build
 # or
@@ -8,6 +9,7 @@ yarn build
 ```
 
 ## How would I set this up myself?
+
 ```bash
 # install yarn
 
@@ -60,6 +62,7 @@ yarn add -D eslint
 eslint --init # edit your .eslintrc.js
 yarn add -D eslint-plugin-import
 yarn add -D eslint-plugin-react
+yarn add -D eslint-plugin-react-hooks
 yarn add -D eslint-plugin-jsx-a11y
 yarn add -D eslint-config-airbnb
 yarn add -D eslint-loader
@@ -67,9 +70,9 @@ yarn add -D eslint-loader
 yarn add -D prettier
 yarn add -D eslint-config-prettier eslint-plugin-prettier
 # babel
-yarn add core-js@2
 yarn add -D @babel/core @babel/cli
-yarn add -D @babel/preset-env @babel/polyfill
+yarn add -D @babel/preset-env
+yarn add core-js regenerator-runtime
 yarn add -D babel-loader
 
 # typescript
@@ -78,6 +81,7 @@ yarn tsc --init # edit your tsconfig.json
 yarn add -D ts-loader
 yarn add -D fork-ts-checker-webpack-plugin
 # eslint
+yarn add -D @typescript-eslint/parser
 yarn add -D @typescript-eslint/eslint-plugin
 
 # external lib

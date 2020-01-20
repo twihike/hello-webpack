@@ -1,8 +1,8 @@
 const webpack = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const codeframe = require('eslint/lib/formatters/codeframe');
+const codeframe = require('eslint/lib/cli-engine/formatters/codeframe');
 
 module.exports = {
   entry: {
@@ -84,8 +84,10 @@ module.exports = {
               limit: 4096,
               fallback: {
                 loader: 'file-loader',
+                esModule: false,
                 options: {
                   name: 'img/[name].[hash:8].[ext]',
+                  esModule: false,
                 },
               },
             },
@@ -99,6 +101,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: 'img/[name].[hash:8].[ext]',
+              esModule: false,
             },
           },
         ],
@@ -110,10 +113,12 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 4096,
+              esModule: false,
               fallback: {
                 loader: 'file-loader',
                 options: {
                   name: 'media/[name].[hash:8].[ext]',
+                  esModule: false,
                 },
               },
             },
@@ -178,7 +183,6 @@ module.exports = {
     new CaseSensitivePathsPlugin(),
     new CleanWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin({
-      tslint: false,
       formatter: 'codeframe',
       checkSyntacticErrors: true,
     }),
