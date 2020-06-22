@@ -184,7 +184,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin({
       formatter: 'codeframe',
-      checkSyntacticErrors: true,
+      // checkSyntacticErrors: true,
     }),
   ],
 };
