@@ -3,7 +3,7 @@ const sass = require('sass');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VisualizerPlugin = require('webpack-visualizer-plugin');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const base = require('./webpack.base.config.js');
 
 const nodeEnv = 'development';
