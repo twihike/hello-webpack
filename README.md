@@ -45,7 +45,7 @@ yarn add -D style-loader
 yarn add -D css-loader
 yarn add -D mini-css-extract-plugin
 # postcss
-yarn add -D postcss-cli
+yarn add -D postcss postcss-cli
 yarn add -D browserslist # use postcss-preset-env and babel
 yarn add -D postcss-preset-env
 yarn add -D cssnano
