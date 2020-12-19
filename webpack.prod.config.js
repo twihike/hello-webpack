@@ -72,7 +72,7 @@ module.exports = merge(base, {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        vendors: {
+        defaultVendors: {
           name: 'chunk-vendors',
           test: /[\\/]node_modules[\\/]/,
           priority: -10,
@@ -87,10 +87,11 @@ module.exports = merge(base, {
         },
       },
     },
+    // chunkIds: 'named',
+    // moduleIds: 'hashed',
     minimizer: [
       new TerserPlugin({
         parallel: true,
-        sourceMap: true,
       }),
     ],
   },
@@ -101,10 +102,6 @@ module.exports = merge(base, {
         VUE_APP_CLI_UI_URL: '""',
         BASE_URL: '""',
       },
-    }),
-    new webpack.NamedChunksPlugin(),
-    new webpack.HashedModuleIdsPlugin({
-      hashDigest: 'hex',
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash:8].css',

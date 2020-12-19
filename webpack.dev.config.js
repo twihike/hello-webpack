@@ -2,7 +2,7 @@ const path = require('path');
 const sass = require('sass');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const VisualizerPlugin = require('webpack-visualizer-plugin');
+// const VisualizerPlugin = require('webpack-visualizer-plugin');
 const { merge } = require('webpack-merge');
 const base = require('./webpack.base.config.js');
 
@@ -60,7 +60,7 @@ module.exports = merge(base, {
       },
     ],
   },
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'eval-cheap-module-source-map',
   devServer: {
     clientLogLevel: 'warning',
     compress: true,
@@ -79,6 +79,6 @@ module.exports = merge(base, {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
     }),
-    new VisualizerPlugin(),
+    // new VisualizerPlugin(),
   ],
 });

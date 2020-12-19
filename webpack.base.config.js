@@ -86,7 +86,7 @@ module.exports = {
                 loader: 'file-loader',
                 esModule: false,
                 options: {
-                  name: 'img/[name].[hash:8].[ext]',
+                  name: 'img/[name].[contenthash:8].[ext]',
                   esModule: false,
                 },
               },
@@ -100,7 +100,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'img/[name].[hash:8].[ext]',
+              name: 'img/[name].[contenthash:8].[ext]',
               esModule: false,
             },
           },
@@ -117,7 +117,7 @@ module.exports = {
               fallback: {
                 loader: 'file-loader',
                 options: {
-                  name: 'media/[name].[hash:8].[ext]',
+                  name: 'media/[name].[contenthash:8].[ext]',
                   esModule: false,
                 },
               },
@@ -135,7 +135,7 @@ module.exports = {
               fallback: {
                 loader: 'file-loader',
                 options: {
-                  name: 'fonts/[name].[hash:8].[ext]',
+                  name: 'fonts/[name].[contenthash:8].[ext]',
                 },
               },
             },
@@ -156,15 +156,15 @@ module.exports = {
       },
     ],
   },
-  node: {
-    setImmediate: false,
-    process: 'mock',
-    dgram: 'empty',
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty',
-    child_process: 'empty',
-  },
+  // node: {
+  //   setImmediate: false,
+  //   process: 'mock',
+  //   dgram: 'empty',
+  //   fs: 'empty',
+  //   net: 'empty',
+  //   tls: 'empty',
+  //   child_process: 'empty',
+  // },
   externals: [
     {
       lodash: {
