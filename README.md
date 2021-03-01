@@ -68,7 +68,7 @@ yarn add -D eslint-config-airbnb
 yarn add -D eslint-loader
 # prettier
 yarn add -D prettier
-yarn add -D eslint-config-prettier eslint-plugin-prettier
+yarn add -D eslint-config-prettier
 # babel
 yarn add -D @babel/core @babel/cli
 yarn add -D @babel/preset-env
