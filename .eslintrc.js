@@ -14,7 +14,7 @@ module.exports = {
   overrides: [
     {
       files: ['*.js'],
-      extends: ['airbnb', 'plugin:prettier/recommended'],
+      extends: ['airbnb', 'prettier'],
       rules: {
         'import/no-extraneous-dependencies': [
           'error',
@@ -38,8 +38,7 @@ module.exports = {
       extends: [
         'airbnb',
         'plugin:@typescript-eslint/recommended',
-        'plugin:prettier/recommended',
-        'prettier/@typescript-eslint',
+        'prettier',
       ],
       plugins: ['@typescript-eslint'],
     },
