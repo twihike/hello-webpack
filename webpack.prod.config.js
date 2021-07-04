@@ -26,7 +26,7 @@ module.exports = merge(base, {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '../',
+              publicPath: 'auto',
             },
           },
           {
@@ -46,7 +46,7 @@ module.exports = merge(base, {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '../',
+              publicPath: 'auto',
             },
           },
           {
