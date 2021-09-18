@@ -77,74 +77,38 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|webp)(\?.*)?$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 4096,
-              fallback: {
-                loader: 'file-loader',
-                esModule: false,
-                options: {
-                  name: 'img/[name].[contenthash:8].[ext]',
-                  esModule: false,
-                },
-              },
-            },
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 4 * 1024,
           },
-        ],
+        },
       },
       {
         test: /\.(svg)(\?.*)?$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'img/[name].[contenthash:8].[ext]',
-              esModule: false,
-            },
-          },
-        ],
+        type: "asset/resource",
       },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 4096,
-              esModule: false,
-              fallback: {
-                loader: 'file-loader',
-                options: {
-                  name: 'media/[name].[contenthash:8].[ext]',
-                  esModule: false,
-                },
-              },
+        type: 'asset',
+          parser: {
+            dataUrlCondition: {
+              maxSize: 4 * 1024,
             },
           },
-        ],
-      },
+        },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 4096,
-              fallback: {
-                loader: 'file-loader',
-                options: {
-                  name: 'fonts/[name].[contenthash:8].[ext]',
-                },
-              },
+        type: 'asset',
+          parser: {
+            dataUrlCondition: {
+              maxSize: 4 * 1024,
             },
           },
-        ],
-      },
+        },
       {
         test: /\.txt$/,
-        use: 'raw-loader',
+        type: 'asset/source',
       },
       {
         test: /\.(csv|tsv)$/,

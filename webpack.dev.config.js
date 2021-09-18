@@ -13,6 +13,7 @@ module.exports = merge(base, {
   mode: nodeEnv,
   output: {
     filename: 'js/[name].js',
+    assetModuleFilename: "assets/[name]-[contenthash:8][ext]",
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
   },
@@ -62,7 +63,9 @@ module.exports = merge(base, {
   },
   devtool: 'eval-cheap-module-source-map',
   devServer: {
-    clientLogLevel: 'warning',
+    client: {
+      logging: 'warn',
+    },
     compress: true,
     hot: true,
   },

@@ -29,9 +29,6 @@ yarn add -D clean-webpack-plugin
 yarn add -D webpack-visualizer-plugin
 
 # asset
-yarn add -D file-loader
-yarn add -D url-loader
-yarn add -D raw-loader
 yarn add -D papaparse
 yarn add -D csv-loader
 yarn add -D xml-loader

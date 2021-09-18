@@ -13,8 +13,9 @@ process.env.NODE_ENV = nodeEnv;
 module.exports = merge(base, {
   mode: nodeEnv,
   output: {
-    filename: 'js/[name].[contenthash:8].js',
-    chunkFilename: 'js/[name].[contenthash:8].js',
+    filename: 'js/[name]-[contenthash:8].js',
+    chunkFilename: 'js/[name]-[contenthash:8].js',
+    assetModuleFilename: "assets/[name]-[contenthash:8][ext]",
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
   },
@@ -104,8 +105,8 @@ module.exports = merge(base, {
       },
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash:8].css',
-      chunkFilename: 'css/[name].[contenthash:8].css',
+      filename: 'css/[name]-[contenthash:8].css',
+      chunkFilename: 'css/[name]-[contenthash:8].css',
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
